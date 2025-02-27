@@ -37,7 +37,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="absolute top-1/2 transform -translate-y-1/2">
               <h1 className="text-4xl font-bold mb-4">Welcome to SciViz!</h1>
-              <p className="text-xl text-gray-600 mb-6">Explore all scientific knowledge</p>
+              <p className="text-xl text-gray-600 mb-6">Navigate Science Through Visual Discovery</p>
               <a 
                 href="https://sciviz.org/app/" 
                 className="inline-block px-6 py-3 bg-purple-800 text-white font-semibold rounded-lg hover:bg-purple-500 transition-colors"
