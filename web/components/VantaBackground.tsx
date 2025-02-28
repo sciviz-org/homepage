@@ -9,7 +9,17 @@ export default function VantaBackground({ children }: { children: React.ReactNod
   const vantaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!vantaEffect) {
+    if (!vantaEffect && vantaRef.current) {
+      // Get the computed background color from CSS
+      const computedStyle = getComputedStyle(document.documentElement);
+      const backgroundColor = computedStyle.getPropertyValue('--background').trim();
+      
+      // Convert CSS rgb color to hex
+      const rgb = backgroundColor.match(/\d+/g);
+      const hexColor = rgb 
+        ? parseInt(rgb[0]) << 16 | parseInt(rgb[1]) << 8 | parseInt(rgb[2])
+        : 0xffffff;
+
       setVantaEffect(
         RINGS({
           el: vantaRef.current,
@@ -21,7 +31,7 @@ export default function VantaBackground({ children }: { children: React.ReactNod
           minWidth: 200.00,
           scale: 1.00,
           scaleMobile: 1.00,
-          backgroundColor: 0xffffff,
+          backgroundColor: hexColor,
         })
       );
     }
