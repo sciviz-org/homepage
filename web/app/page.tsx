@@ -40,7 +40,7 @@ export default function Home() {
               <p className="text-xl text-muted-foreground mb-6">Navigate Science Through Visual Discovery</p>
               <a 
                 href="https://sciviz.org/app/" 
-                className="inline-block px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                className="inline-block px-6 py-3 bg-purple-600 font-semibold rounded-lg hover:bg-purple-500 transition-colors"
               >
                 Get Started!
               </a>
